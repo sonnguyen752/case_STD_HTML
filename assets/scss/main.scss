@@ -1,0 +1,153 @@
+@import "partials/variables";
+@import "partials/font";
+
+body, html{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    background: rgb(104, 65, 196) ;
+}
+.nav-menu{
+    border-bottom: 1px solid white;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    position: relative;
+    display: block;
+    transition: all 500ms ease;
+}
+header nav ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    width: 0%;
+    left:0;
+    height: 2px;
+    background: red;
+    display: block;
+    transition: all 500ms ease;
+}
+header nav ul li a:hover{
+    scale: 1.2;
+    color:blueviolet;
+}
+header nav ul li a:hover::after{
+    width:100%;
+}
+.btn{
+    // border: 1px solid red;
+    margin-right: 20px;
+    border-radius: 20px;
+
+    transition: all 500ms ease;
+}
+.btn:hover{
+    scale: 1.1;
+    color: rgb(187, 231, 27);
+}
+.p-y__100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.section1{
+    & .text-left{
+        text-align: left !important;
+    }
+}
+.section3{
+    & .text-left{
+        text-align: left !important;
+    }
+}
+.section3 img{
+   position: relative;
+}
+.section3 .col:first-child{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-content: center;
+    // border: 1px solid red;
+    position: relative;
+}
+
+
+.note{
+    text-transform: uppercase;
+    font-weight: bold;
+    // background-image: -o-linear-gradient(to left red yellow 0.4);
+    // color: linear-gradient(to left red yellow 0.4);
+}
+
+.cat-icon{
+    width:90px;
+    margin: auto;
+    color: white;
+    font-size: 3em;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center !important;
+}
+.cat-cap{
+    color: white;
+    text-align: center;
+    & a{
+        text-decoration: none;
+    }
+}
+.single-cat{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    width:250px;
+    height:250px;
+    background-color: aquamarine;
+    border-radius: 20px;
+   
+}
+.section6 {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 40px;
+    background: rgb(97, 97, 112);
+}
+footer i{
+    opacity: 0.5;
+    &:hover{
+        scale: 1.1;
+        opacity: 1;
+        color:aliceblue;
+        transition: all 500ms ease-in;
+    }
+}
+
+@media only screen and (max-width:412px){
+    .section1 div, .section-2 .row, .section3 .row, .section-4 .row{
+        display: grid;
+        grid-template-columns: 100%;
+        align-content: center;
+        justify-items: center;
+    }
+    .section-4 .row:last-child{
+       padding-left: 60px;
+    }
+   .section-5 .col-img{
+       display: block;
+       display:none;
+   }
+   .section6{
+       margin: auto;
+   }
+}
+@media only screen and(max-width:768px){
+    .section-2 .col{
+        width:70%;
+        height:70%;
+    }
+    .section6{
+        margin: auto;
+    }
+}
