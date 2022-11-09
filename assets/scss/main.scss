@@ -11,6 +11,13 @@ body, html{
 .nav-menu{
     border-bottom: 1px solid white;
 }
+
+header .bg-offcanvas{
+    background: #15d4a5;
+}
+.nav-item a{
+    color: white;
+}
 header nav ul li a{
     text-decoration: none;
     color: white;
@@ -68,6 +75,14 @@ header nav ul li a:hover::after{
     border-radius: 20px;
     background: rgb(108, 129, 175);
 }
+.section-2 .col:hover{
+    scale: 1.1;
+    opacity: 0.7;
+    transition: all 500ms ease-in;
+    cursor: pointer;
+
+}
+
 .section3{
     & .d-grid{
         border: 1px solid red;
@@ -84,10 +99,7 @@ header nav ul li a:hover::after{
     }
 }
 .section-4{
-    background: rgb(17, 12, 100);
-}
-.section-5 .bg__gray{
-    background: #aaa;
+    background: linear-gradient(to right, rgb(53, 53, 172), rgb(211, 194, 194));
 }
 
 .note{
@@ -108,16 +120,20 @@ header nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center !important;
 }
-.cat-cap{
+.cat-cap {
     text-align: center;
-    & span{
+    & a {text-decoration: none;}
+    & p span a{
         color:rgb(187, 231, 27);
     }
-    & a{
-        text-decoration: none;
+    & h4 a{
         color:white;
     }
 }
+.single-cat .cat-cap p a:hover{
+    color:red !important;
+}
+
 .single-cat{
     margin-top: 40px;
     margin-bottom: 40px;
@@ -127,16 +143,41 @@ header nav ul li a:hover::after{
     height:300px;
     background-color: rgb(141, 89, 224);
     border-radius: 20px;
-   
+    position: relative;
+    z-index: 9999;
+
+   &::before{
+       content: "";
+       position: absolute;
+       bottom: 0;
+       width: 100%;
+       height:100%;
+       border:1px solid rgb(14, 69, 153);
+       border-radius: 20px;
+       rotate: 5deg;
+   }
 }
+.single-cat:hover{
+    background: white;
+    transition: all 1s ease-in;
+    & h4 a{
+        color:#15d4a5;
+        transition: all 1s ease-in;
+    }
+}
+
 .section-5{
     margin-top: 100px;
+    & .bg__gray{
+        background: #aaa;
+    }
     & .img-center{
         text-align: center;
         width: fix-content;
     }
     
 }
+
 .section6 {
     margin-top: 100px;
     margin-left: 100px;

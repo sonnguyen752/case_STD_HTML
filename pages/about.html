@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    <style>
+        
+.cat-icon {
+  width: 90px;
+  height:90px;
+  margin: auto;
+  color: rgb(49, 69, 180);
+  font-size: 3em;
+  border: 1px solid rgb(80, 130, 223);
+  border-radius: 50%;
+  text-align: center !important;
+}
+
+.cat-cap {
+  text-align: center;
+}
+.cat-cap a {
+  text-decoration: none;
+}
+.cat-cap p span a {
+  color: rgb(187, 231, 27);
+}
+.cat-cap h4 a {
+  color: white;
+}
+
+.single-cat .cat-cap p a:hover {
+  color: red !important;
+}
+
+.single-cat {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(141, 89, 224);
+  border-radius: 20px;
+  position: relative;
+  z-index: 9999;
+}
+.single-cat::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(14, 69, 153);
+  border-radius: 20px;
+  rotate: 5deg;
+}
+
+.single-cat:hover {
+  background: white;
+  transition: all 1s ease-in;
+}
+.single-cat:hover h4 a {
+  color: #15d4a5;
+  transition: all 1s ease-in;
+}
+    </style>
+</head>
+<body>
+    <div class="single-cat">
+        <div class="cat-icon">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <div class="cat-cap ">
+            <h4 class=""> <a href="#">personal Loan</a></h4>
+            <p class="fs-5">We realize ideas from simple toomplex <a href="">Read More</a> </p>
+        </div>
+    </div>
+</body>
+</html>

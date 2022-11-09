@@ -9,6 +9,14 @@ body, html {
   border-bottom: 1px solid white;
 }
 
+header .bg-offcanvas {
+  background: #15d4a5;
+}
+
+.nav-item a {
+  color: white;
+}
+
 header nav ul li a {
   text-decoration: none;
   color: white;
@@ -72,6 +80,13 @@ header nav ul li a:hover::after {
   background: rgb(108, 129, 175);
 }
 
+.section-2 .col:hover {
+  scale: 1.1;
+  opacity: 0.7;
+  transition: all 500ms ease-in;
+  cursor: pointer;
+}
+
 .section3 .d-grid {
   border: 1px solid red;
   grid-template-columns: auto auto auto;
@@ -86,11 +101,7 @@ header nav ul li a:hover::after {
 }
 
 .section-4 {
-  background: rgb(17, 12, 100);
-}
-
-.section-5 .bg__gray {
-  background: #aaa;
+  background: linear-gradient(to right, rgb(53, 53, 172), rgb(211, 194, 194));
 }
 
 .note {
@@ -114,12 +125,18 @@ header nav ul li a:hover::after {
 .cat-cap {
   text-align: center;
 }
-.cat-cap span {
-  color: rgb(187, 231, 27);
-}
 .cat-cap a {
   text-decoration: none;
+}
+.cat-cap p span a {
+  color: rgb(187, 231, 27);
+}
+.cat-cap h4 a {
   color: white;
+}
+
+.single-cat .cat-cap p a:hover {
+  color: red !important;
 }
 
 .single-cat {
@@ -130,10 +147,34 @@ header nav ul li a:hover::after {
   height: 300px;
   background-color: rgb(141, 89, 224);
   border-radius: 20px;
+  position: relative;
+  z-index: 9999;
+}
+.single-cat::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(14, 69, 153);
+  border-radius: 20px;
+  rotate: 5deg;
+}
+
+.single-cat:hover {
+  background: white;
+  transition: all 1s ease-in;
+}
+.single-cat:hover h4 a {
+  color: #15d4a5;
+  transition: all 1s ease-in;
 }
 
 .section-5 {
   margin-top: 100px;
+}
+.section-5 .bg__gray {
+  background: #aaa;
 }
 .section-5 .img-center {
   text-align: center;
