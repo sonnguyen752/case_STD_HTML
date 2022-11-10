@@ -1,12 +1,21 @@
+.note, .section1 {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
 body, html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background: rgb(104, 65, 196);
+  background: linear-gradient(to right, rgb(48, 13, 66), rgb(11, 5, 71));
 }
 
 .nav-menu {
   border-bottom: 1px solid white;
+}
+
+.navbar-toggler {
+  background: white;
 }
 
 header .bg-offcanvas {
@@ -14,12 +23,11 @@ header .bg-offcanvas {
 }
 
 .nav-item a {
-  color: white;
+  color: rgb(109, 105, 144);
 }
 
 header nav ul li a {
   text-decoration: none;
-  color: white;
   font-size: 1.2em;
   position: relative;
   display: block;
@@ -33,14 +41,14 @@ header nav ul li a::after {
   width: 0%;
   left: 0;
   height: 2px;
-  background: red;
+  background: linear-gradient(to right, red, yellow);
   display: block;
   transition: all 500ms ease;
 }
 
 header nav ul li a:hover {
   scale: 1.1;
-  color: blueviolet;
+  color: white !important;
 }
 
 header nav ul li a:hover::after {
@@ -80,7 +88,7 @@ header nav ul li a:hover::after {
   background: rgb(108, 129, 175);
 }
 
-.section-2 .col:hover {
+.section-2 .col:hover img {
   scale: 1.1;
   opacity: 0.7;
   transition: all 500ms ease-in;
@@ -99,16 +107,19 @@ header nav ul li a:hover::after {
 .section3 .text-left {
   text-align: left !important;
 }
+.section3 .text-left .p-2 {
+  color: rgb(109, 105, 144);
+}
 
 .section-4 {
-  background: linear-gradient(to right, rgb(53, 53, 172), rgb(211, 194, 194));
+  background: linear-gradient(to right, rgb(28, 23, 83), rgb(67, 32, 73));
 }
 
 .note {
   text-transform: uppercase;
   font-weight: bold;
   color: pink;
-  background: linear-gradient(to right, #e40b0b, #aaa);
+  background: linear-gradient(to right, #e40b0b, yellow);
   -webkit-background-clip: text;
 }
 
@@ -135,17 +146,13 @@ header nav ul li a:hover::after {
   color: white;
 }
 
-.single-cat .cat-cap p a:hover {
-  color: red !important;
-}
-
 .single-cat {
   margin-top: 40px;
   margin-bottom: 40px;
   padding-top: 20px;
   width: 300px;
   height: 300px;
-  background-color: rgb(141, 89, 224);
+  background-color: rgb(51, 46, 100);
   border-radius: 20px;
   position: relative;
   z-index: 9999;
@@ -162,6 +169,7 @@ header nav ul li a:hover::after {
 }
 
 .single-cat:hover {
+  cursor: pointer;
   background: white;
   transition: all 1s ease-in;
 }
@@ -169,12 +177,16 @@ header nav ul li a:hover::after {
   color: #15d4a5;
   transition: all 1s ease-in;
 }
+.single-cat:hover p a {
+  color: red;
+  transition: all 500ms ease-in;
+}
 
 .section-5 {
   margin-top: 100px;
 }
 .section-5 .bg__gray {
-  background: #aaa;
+  background: linear-gradient(to right, rgb(63, 30, 88), rgb(29, 26, 89));
 }
 .section-5 .img-center {
   text-align: center;
@@ -186,20 +198,28 @@ header nav ul li a:hover::after {
   margin-left: 100px;
   margin-right: 100px;
   border-radius: 40px;
-  background: rgb(79, 79, 133);
+  background: linear-gradient(to right, rgb(36, 33, 99), rgb(34, 32, 98));
+}
+.section6 .text-footer {
+  color: rgb(62, 62, 104);
 }
 
+footer .text-footer {
+  color: rgb(62, 62, 104);
+}
 footer i {
+  color: rgb(56, 98, 189);
   opacity: 0.5;
 }
 footer i:hover {
+  cursor: pointer;
   scale: 1.1;
   opacity: 1;
   color: aliceblue;
   transition: all 500ms ease-in;
 }
 
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 415px) {
   .section1 div, .section-2 .row, .section3 .row, .section-4 .row {
     display: grid;
     grid-template-columns: 100%;
